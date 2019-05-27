@@ -1,0 +1,231 @@
+* {
+  font-family: 'Source Sans Pro', sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #1D1B18;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background: grey;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100vw;
+  background: red;
+  margin: 0 0 30px;
+  padding: 0;
+}
+
+h1 {
+  font-weight: 900;
+  font-size: 72px;
+  color: #FFB800;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  width: 350px;
+  background-color: #fff;
+}
+
+section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100vw;
+  background: blue;
+}
+
+.toggleText {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 350px;
+  height: 40px;
+  font-weight: 300;
+  font-size: 24px;
+  color: #ffffff;
+  background: #000;
+}
+
+.toggleCheckbox {
+  width: 70px;
+  height: 40px;
+  background-color: #fff;
+  position: relative;
+  border-radius: 100px;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.toggleCheckbox::after {
+  content: '';
+  top: 3px;
+  left: 3px;
+  position: absolute;
+  height: 34px;
+  width: 34px;
+  background-color: #000000;
+  border-radius: 100px;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+#toggle {
+  display: none;
+}
+
+#toggle:checked + .toggleCheckbox {
+  background-color: #FFB800;
+}
+
+#toggle:checked + .toggleCheckbox::after {
+  left: 33px;
+}
+
+.image {
+  border-radius: 15px;
+  height: 320px;
+  width: 510px;
+  margin: 15px 0 0;
+  background: url("https://picsum.photos/510/320");
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100vw;
+  background: green;
+  margin: 60px 0 0;
+  height: 50px;
+}
+
+footer ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 510px;
+  height: 50px;
+}
+
+footer ul li {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+}
+
+footer ul li a {
+  background-color: #fff;
+}
+
+footer ul li:last-of-tyle {
+  -ms-flex-preferred-size: 100px;
+      flex-basis: 100px;
+}
+
+/* ambi */
+.ambi {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.ambi::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  height: inherit;
+  width: inherit;
+  background-color: inherit;
+  background-image: inherit;
+  background-size: inherit;
+  background-position: inherit;
+  background-repeat: no-repeat;
+  border-radius: inherit;
+  opacity: 1;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+  -webkit-filter: blur(25px);
+          filter: blur(25px);
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.ambi:hover::before {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+/*# sourceMappingURL=style.css.map */

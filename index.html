@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>ambi.lib</title>
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,900&display=swap&subset=cyrillic" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css"> 
+  <!--<link rel="stylesheet" href="./css/ambi.css">-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/brands.css" integrity="sha384-i2PyM6FMpVnxjRPi0KW/xIS7hkeSznkllv+Hx/MtYDaHA5VcF0yL3KVlvzp8bWjQ" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/solid.css" integrity="sha384-ioUrHig76ITq4aEJ67dHzTvqjsAP/7IzgwE7lgJcg2r7BRNGYSK0LwSmROzYtgzs" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/fontawesome.css" integrity="sha384-sri+NftO+0hcisDKgr287Y/1LVnInHJ1l+XC7+FOabmTTIK0HnE2ID+xxvJ21c5J" crossorigin="anonymous">
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <h1>AMBI.lib</h1>
+    </header>
+    <section>
+        <div class="toggleText">
+          Turn on an ambilight
+          <input type="checkbox" name="toggle" id="toggle"><label class="toggleCheckbox" for="toggle"></label>
+            
+        </div>
+        <div class="image"></div>
+    </section>
+    <footer>
+      <ul>
+        <li><a href=""><i class="fas fa-file-download"></i>Download .zip</a></li>
+        <li><a href=""><i class="fab fa-github"></i>View on GitHub</a></li>
+        <li><a href=""><i class="fab fa-telegram-plane"></i></a></li>
+      </ul>
+    </footer>
+  </div>
+  
+  
+
+
+<script src="//yandex.st/jquery/2.1.1/jquery.min.js"></script>
+<script>
+function getStatus(){
+  if ($('#toggle').prop('checked')){
+    $('.image').toggleClass('ambi');
+  } else {
+    $('.image').toggleClass('ambi');
+  }
+}
+$(function() {
+   $('#toggle').on( 'change' , getStatus);
+})
+</script>
+</body>
+</html>
