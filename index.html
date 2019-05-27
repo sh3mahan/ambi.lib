@@ -2,12 +2,11 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>ambi.lib</title>
+  <title>Demo page — ambi.lib</title>
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,900&display=swap&subset=cyrillic" rel="stylesheet">
   <link rel="stylesheet" href="./css/style.css"> 
-  <!--<link rel="stylesheet" href="./css/ambi.css">-->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/brands.css" integrity="sha384-i2PyM6FMpVnxjRPi0KW/xIS7hkeSznkllv+Hx/MtYDaHA5VcF0yL3KVlvzp8bWjQ" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/solid.css" integrity="sha384-ioUrHig76ITq4aEJ67dHzTvqjsAP/7IzgwE7lgJcg2r7BRNGYSK0LwSmROzYtgzs" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/fontawesome.css" integrity="sha384-sri+NftO+0hcisDKgr287Y/1LVnInHJ1l+XC7+FOabmTTIK0HnE2ID+xxvJ21c5J" crossorigin="anonymous">
@@ -19,7 +18,7 @@
     </header>
     <section>
         <div class="toggleText">
-          Turn on an ambilight
+          Turn on an ambient light
           <input type="checkbox" name="toggle" id="toggle"><label class="toggleCheckbox" for="toggle"></label>
             
         </div>
@@ -27,10 +26,11 @@
     </section>
     <footer>
       <ul>
-        <li><a href=""><i class="fas fa-file-download"></i>Download .zip</a></li>
-        <li><a href=""><i class="fab fa-github"></i>View on GitHub</a></li>
-        <li><a href=""><i class="fas fa-question-circle"></i>How to install</a></li>
+        <li><a href="https://github.com/sh3mahan/ambi.lib/archive/master.zip" download title="Download .zip file"><i class="fas fa-file-download"></i>Download .zip</a></li>
+        <li><a href="https://github.com/sh3mahan/ambi.lib" title="Viev project on GitHub"><i class="fab fa-github"></i>View on GitHub</a></li>
+        <li><a href="#" title="How to use"><i class="fas fa-question-circle"></i>How to use</a></li>
       </ul>
+      <p>Designed by&nbsp;<a href="https://github.com/sh3mahan" title="Aleksandr Shemakhanov on GitHub">Sh3mahan</a>&nbsp;<span class='year'></span></p>
     </footer>
   </div>
   
@@ -49,6 +49,8 @@ function getStatus(){
 $(function() {
    $('#toggle').on( 'change' , getStatus);
 })
+var now = new Date();
+document.querySelector(".year").innerHTML = now.getFullYear();
 </script>
 </body>
 </html>

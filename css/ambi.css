@@ -10,6 +10,7 @@
       -ms-flex-align: center;
           align-items: center;
   background-position: 50% 50%;
+  background-size: cover;
   background-repeat: no-repeat;
   -webkit-transition: all .4s ease-in-out;
   transition: all .4s ease-in-out;
