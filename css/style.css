@@ -41,7 +41,6 @@ body {
   height: 100vh;
   margin: 0;
   padding: 0;
-  background: grey;
 }
 
 header {
@@ -52,7 +51,6 @@ header {
       -ms-flex-pack: center;
           justify-content: center;
   width: 100vw;
-  background: red;
   margin: 0 0 30px;
   padding: 0;
 }
@@ -65,7 +63,6 @@ h1 {
   margin: 0;
   padding: 0;
   width: 350px;
-  background-color: #fff;
 }
 
 section {
@@ -83,7 +80,6 @@ section {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 100vw;
-  background: blue;
 }
 
 .toggleText {
@@ -101,7 +97,6 @@ section {
   font-weight: 300;
   font-size: 24px;
   color: #ffffff;
-  background: #000;
 }
 
 .toggleCheckbox {
@@ -112,6 +107,7 @@ section {
   border-radius: 100px;
   -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
+  cursor: pointer;
 }
 
 .toggleCheckbox::after {
@@ -121,10 +117,10 @@ section {
   position: absolute;
   height: 34px;
   width: 34px;
-  background-color: #000000;
   border-radius: 100px;
   -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
+  background: #000000;
 }
 
 #toggle {
@@ -133,6 +129,8 @@ section {
 
 #toggle:checked + .toggleCheckbox {
   background-color: #FFB800;
+  -webkit-box-shadow: 0 0 25px rgba(255, 184, 0, 0.5);
+          box-shadow: 0 0 25px rgba(255, 184, 0, 0.5);
 }
 
 #toggle:checked + .toggleCheckbox::after {
@@ -155,32 +153,59 @@ footer {
       -ms-flex-pack: center;
           justify-content: center;
   width: 100vw;
-  background: green;
   margin: 60px 0 0;
   height: 50px;
 }
 
 footer ul {
   list-style: none;
+  width: 510px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 510px;
-  height: 50px;
 }
 
 footer ul li {
-  -ms-flex-preferred-size: 100%;
-      flex-basis: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  margin-right: 20px;
+}
+
+footer ul li:last-of-type {
+  margin-right: 0;
 }
 
 footer ul li a {
-  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  background-color: #FFB800;
+  border-radius: 15px;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 18px;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
 }
 
-footer ul li:last-of-tyle {
-  -ms-flex-preferred-size: 100px;
-      flex-basis: 100px;
+footer ul li a i {
+  margin-right: 7px;
+}
+
+footer ul li a:hover {
+  -webkit-box-shadow: 0 0 25px rgba(255, 184, 0, 0.5);
+          box-shadow: 0 0 25px rgba(255, 184, 0, 0.5);
 }
 
 /* ambi */
@@ -214,17 +239,11 @@ footer ul li:last-of-tyle {
   background-position: inherit;
   background-repeat: no-repeat;
   border-radius: inherit;
-  opacity: 1;
+  opacity: .75;
   -webkit-transition: all .4s ease-in-out;
   transition: all .4s ease-in-out;
-  -webkit-filter: blur(25px);
-          filter: blur(25px);
-  -webkit-transform: scale(1);
-          transform: scale(1);
-}
-
-.ambi:hover::before {
-  opacity: 1;
+  -webkit-filter: blur(15px);
+          filter: blur(15px);
   -webkit-transform: scale(1);
           transform: scale(1);
 }

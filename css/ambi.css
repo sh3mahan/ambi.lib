@@ -28,17 +28,11 @@
   background-position: inherit;
   background-repeat: no-repeat;
   border-radius: inherit;
-  opacity: 1;
+  opacity: .75;
   -webkit-transition: all .4s ease-in-out;
   transition: all .4s ease-in-out;
-  -webkit-filter: blur(25px);
-          filter: blur(25px);
-  -webkit-transform: scale(1);
-          transform: scale(1);
-}
-
-.ambi:hover::before {
-  opacity: 1;
+  -webkit-filter: blur(15px);
+          filter: blur(15px);
   -webkit-transform: scale(1);
           transform: scale(1);
 }
